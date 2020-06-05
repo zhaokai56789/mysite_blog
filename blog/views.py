@@ -14,6 +14,14 @@ def get_blog_list_common_data(request, blogs_all_list):
     page_num = request.GET.get('page', 1) # 获取url的页面参数（GET请求）
     page_of_blogs = paginator.get_page(page_num)
     currentr_page_num = page_of_blogs.number # 获取当前页码
+    blogs = page_of_blogs.object_list
+    for blog in blogs:
+        # 只有markdown需要
+        blog.content = markdown.markdown(blog.content, extensions=[
+            'markdown.extensions.extra',
+            'markdown.extensions.codehilite',  # 语法高亮拓展
+            'markdown.extensions.toc'  # 自动生成目录
+        ])  # 修改blog.content内容为html
     # 获取当前页码前后各2页的页码范围
     page_range = list(range(max(currentr_page_num - 2, 1), currentr_page_num)) + \
                  list(range(currentr_page_num, min(currentr_page_num + 2, paginator.num_pages) + 1))
@@ -37,7 +45,7 @@ def get_blog_list_common_data(request, blogs_all_list):
         blog_dates_dict[blog_date] = blog_count
 
     context = {}
-    context['blogs'] = page_of_blogs.object_list
+    context['blogs'] = blogs
     context['page_of_blogs'] = page_of_blogs
     context['page_range'] = page_range
     context['blog_types'] = BlogType.objects.annotate(blog_count=Count('blog'))
