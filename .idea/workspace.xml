@@ -19,13 +19,11 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7a255e12-6c56-4afb-b45e-e1617a7c1e8c" name="默认更改列表" comment="服务器部署2">
+    <list default="true" id="7a255e12-6c56-4afb-b45e-e1617a7c1e8c" name="默认更改列表" comment="服务器部署3">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/settings/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/settings/base.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/settings/development.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mysite/settings/production.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,21 +61,21 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/mysite" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\mysite_blog\mysite" />
-      <recent name="F:\拓展用户模型的方法\static" />
-      <recent name="F:\拓展用户模型的方法\comment\templates\comment" />
-      <recent name="F:\拓展用户模型的方法\comment" />
-      <recent name="F:\拓展用户模型的方法\user\templates\user" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="F:\mysite_blog\mysite" />
       <recent name="F:\mysite_blog\mysite\settings" />
       <recent name="F:\拓展用户模型的方法\user\templates\user" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\mysite_blog" />
+      <recent name="F:\mysite_blog\mysite" />
+      <recent name="F:\拓展用户模型的方法\static" />
+      <recent name="F:\拓展用户模型的方法\comment\templates\comment" />
+      <recent name="F:\拓展用户模型的方法\comment" />
     </key>
   </component>
   <component name="RunManager">
@@ -123,6 +121,8 @@
       <workItem from="1591171333534" duration="32000" />
       <workItem from="1591419641712" duration="959000" />
       <workItem from="1591421829929" duration="3388000" />
+      <workItem from="1591425526752" duration="3267000" />
+      <workItem from="1591445761894" duration="313000" />
     </task>
     <task id="LOCAL-00001" summary="zhaokai56789@163.com">
       <created>1591172957575</created>
@@ -152,7 +152,14 @@
       <option name="project" value="LOCAL" />
       <updated>1591425140523</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="服务器部署3">
+      <created>1591425602669</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1591425602669</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,7 +209,8 @@
     <MESSAGE value="zhaokai56789@163.com" />
     <MESSAGE value="服务器部署1" />
     <MESSAGE value="服务器部署2" />
-    <option name="LAST_COMMIT_MESSAGE" value="服务器部署2" />
+    <MESSAGE value="服务器部署3" />
+    <option name="LAST_COMMIT_MESSAGE" value="服务器部署3" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1591087002049">
@@ -221,10 +229,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="270" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1591171070937" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1591425149488">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1591425686720">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1591425149488" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1591425686720" />
     <state x="93" y="93" width="1350" height="638" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1591420284358">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
