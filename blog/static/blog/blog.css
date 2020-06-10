@@ -1,33 +1,62 @@
+body {
+    background: url('/static/images/full-width-bg.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+     background-size: cover;
+}
+div.previous_blog {
+    line-height: 1.4;
+}
+
+div.next_blog {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
 ul.blog-types {
     list-style-type: none;
 }
-div.blog:not(:last-child){
+
+div.blog:not(:last-child) {
     margin-bottom: 2em;
     padding-bottom: 1em;
     border-bottom: 1px solid #eee;
 }
+
 div.blog h3 {
     margin-top: 0.5em;
 }
+
 div.blog p.blog-info {
     margin-bottom: 0;
 }
+
 div.paginator {
     text-align: center;
+    display: inline!important;
 }
-
+ul {
+    list-style-type: none!important;
+}
+ul.pagination {
+    text-align: center;
+    display: inline!important;
+}
 ul.blog-info-description {
     list-style-type: none;
     margin-bottom: 1em;
 }
-ul.blog-info-description li{
+
+ul.blog-info-description li {
     display: inline-block;
     margin-right: 1em;
 }
-div.blog-content{
+
+div.blog-content {
 
     margin-bottom: 2em;
 }
+
 div.blog-more {
     margin-top: 1em;
 }
@@ -35,6 +64,7 @@ div.blog-more {
 div.comment-area {
     margin-top: 2em;
 }
+
 h3.comment-area-title {
     border-bottom: 1px solid #ccc;
     padding-bottom: 0.4em;
@@ -45,13 +75,18 @@ div.django-ckeditor-widget {
 }
 
 div.comment {
+    margin-top: 15px;
     border-bottom: 1px dashed #ccc;
     margin-bottom: 0.5em;
     padding-bottom: 0.5em;
 }
+
 div.reply {
     margin-left: 2em;
+    line-height: 1.4;
 }
+
+
 div#reply_content_container {
     border: 1px solid #d1d1d1;
     border-bottom: none;
@@ -59,6 +94,7 @@ div#reply_content_container {
     overflow: hidden;
     padding: 1em 1em 0.5em;
 }
+
 p#reply_title {
     border-bottom: 1px dashed #ccc;
     padding-bottom: 0.5em;
@@ -71,6 +107,6 @@ div.like {
     padding: 0.5em 0.3em;
 }
 
-div.like .active{
+div.like .active {
     color: #f22;
 }

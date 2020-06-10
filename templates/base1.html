@@ -1,0 +1,103 @@
+{% load static %}
+{% load comment_tags %}
+{% load likes_tags %}
+<!DOCTYPE html>
+<html class="ie ie8" lang="zh-CN">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+	<meta name="keywords" content="博客,个人博客,天健寺个人博客,python学习博客">
+	<meta name="description" content="天健寺的个人博客网站是一个学习分享python技术的博客网站，提供初学者的学习成果总结。">
+    <link rel="shortcut icon" href="{%static "/images/favicon.ico" %}" />
+    <link rel="stylesheet" href="{% static 'bootstrap-3.3.7/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap-3.3.7/js/bootstrap.min.js' %}">
+	<link rel="stylesheet" id="twentytwelve-style-css" href="{% static '/css/index.css' %}" type="text/css" media="all">
+	<!--[if lt IE 9]>
+	<link rel="stylesheet" id="twentytwelve-ie-css"  href="{% static '/css/ie.css' %}" type="text/css" media="all" />
+	<![endif]-->
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+	<style type="text/css" id="custom-background-css">
+		body.custom-background {background-color: #e6e6e6; }
+	</style>
+	<!--[if lt IE 9]>
+	<script src="{% static '/js/html5.js' %}" type="text/javascript"></script>
+	<![endif]-->
+	<script type="text/javascript" src="{% static '/js/jquery.js' %}"></script>
+	<script type="text/javascript" src="{% static '/js/nav.js' %}"></script>
+    <script type="text/javascript" src="chrome-extension://dbjbempljhcmhlfpfacalomonjpalpko/scripts/inspector.js"></script><input type="hidden" id="________________________________i_____________________">
+
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body class="smallscreen">
+    <div id="page" class="hfeed site">
+        <header id="masthead" class="site-header" role="banner">
+            <hgroup>
+                <h1 class="site-title">
+                    <a href="{% url 'home' %}" title="天健寺个人博客" rel="home">天健寺个人博客</a>
+                                </h1>
+                <h2 class="site-description">天健寺个人博客是一个学习python技术的个人博客，提供初学者的学习成果总结。</h2>
+            </hgroup>
+
+           <nav id="site-navigation" class="main-navigation" role="navigation">
+                <ul class="nav-menu">
+
+                    <li class="{% block nav_home_active %}{% endblock %}">
+                        <a href="{% url 'home' %}">首页</a></li>
+                    <li><a href="/blog/type/1">
+                        Django</a>
+                        <ul class="sub-menu"></ul>
+                    </li>
+
+                    <li><a href="/blog/type/2">
+                        随笔</a>
+                        <ul class="sub-menu"></ul>
+                    </li>
+
+                    <li><a href="/blog/type/4">
+                        学习笔记</a>
+                        <ul class="sub-menu"></ul>
+                    </li>
+
+                    <li><a href="/blog/type/5">
+                        BUG记录</a>
+                        <ul class="sub-menu"></ul>
+                    </li>
+                    {% if not user.is_authenticated %}
+                        <li>
+                            <a href="{% url 'login' %}?from={{ request.get_full_path }}">登录</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'register' %}?from={{ request.get_full_path }}">注册</a>
+                        </li>
+                    {% else %}
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button">
+                                {% if user.has_nickname %}
+                                    {{ user.username }}({{ user.get_nickname }})
+                                {% else %}
+                                    {{ user.username }}
+                                {% endif %}
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="{% url 'user_info' %}">个人资料</a></li>
+                                <li><a href="{% url 'change_password' %}">修改密码</a></li>
+                                {% if user.is_staff or user.is_superuser %}
+                                    <li><a href="{% url 'admin:index' %}">后台管理</a></li>
+                                {% endif %}
+                                <li><a href="{% url 'logout' %}?from={{ request.get_full_path }}">退出</a></li>
+                            </ul>
+                        </li>
+                    {% endif %}
+                </ul>
+            </nav>
+        </header>
+        <div class="account-pages"></div>
+        <div class="clearfix"></div>
+        {% block content %}{% endblock %}
+    </div>
+
+
+{% block script_extends %}{% endblock %}
+</body>
+</html>

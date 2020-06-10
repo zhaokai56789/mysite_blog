@@ -11,6 +11,7 @@ class ReadNum(models.Model):
     object_id = models.PositiveIntegerField()
     content_object = GenericForeignKey('content_type', 'object_id')
 
+
 class ReadNumExpandMethod():
     def get_read_num(self):
         try:

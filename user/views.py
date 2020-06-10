@@ -128,12 +128,12 @@ def send_verification_code(request):
         else:
             request.session[send_for] = code
             request.session['send_code_time'] = now
-            
+
             # 发送邮件
             send_mail(
                 '绑定邮箱',
                 '验证码：%s' % code,
-                '2872402050@qq.com',
+                'zhaokai56789@163.com',
                 [email],
                 fail_silently=False,
             )
